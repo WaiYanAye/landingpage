@@ -42,10 +42,10 @@ const transporter = nodemailer.createTransport({
 const sendAutoReply = async (senderName, to) => {
     try {
         let info = await transporter.sendMail({
-            from: `"Kyi Lei Aye" <${emailConfig.user}>`,
+            from: `"Wai Yan Aye" <${emailConfig.user}>`,
             to: to,
             subject: 'Auto-Reply: Thanks for reaching out to me!',
-            text: `Hi ${senderName}, This is Kyi! Thank you for your message. I will get back to you as soon as possible!`
+            text: `Hi ${senderName}, This is Wai! Thank you for your message! I will get back to you!`
         });
         console.log('Auto-reply sent: %s', info.messageId);
     } catch (error) {
